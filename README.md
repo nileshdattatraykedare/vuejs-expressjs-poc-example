@@ -105,5 +105,6 @@ Last but not the least, testing! You can follow TDD or FDD!
 - Please don't forget to write your readme file which should contain what/why your have done things in certain way! Documentation is highly appreciated!
 - Your solution should be committed back into this repository like you would do in a normal project.
 - You can commit and push as many times as you want.
+- We value a clean coding style. It would be nice if you follow something like Airbnb's JavaScript Style Guide!
 
 Best of luck!
