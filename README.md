@@ -45,7 +45,7 @@ We would like you to see if you can build a similar personal loan web applicatio
 
 lets create a micro-service for storing the leads. The lead collector application should have the following features:
 
-* Service for storing the following fields only: 1) name (text), 2) email (text), 3) phone (text).
+* Service for storing the following fields only: 1) name (text), 2) email (text), 3) phone (text), 4) product name
 * This service must be highly available and fault tolerant.
 * System should take the leads and store in a data storage.
 * If the data storage is unavailable for some reasons, system should automatically retry every 1 minute until the data storage is up.
