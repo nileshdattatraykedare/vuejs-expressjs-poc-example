@@ -122,7 +122,7 @@ Young hackers are always around and growing. They need a playground to test thei
 Lets implement a rate limiter (redis?):
 
 * A single IP should not be able to hit your app more than 100 times per min
-* Integration of oAuth (oauth.io), JWT
+* Integration of oAuth (https://auth0.com/), JWT
 * Anything else you would like to do to secure your app?
 
 ## Goal 7
