@@ -108,6 +108,7 @@ When user clicks on apply, a form should show up. The form should have the follo
 * Name
 * Email
 * Phone
+* product (name of the product on which the user clicked apply on)
 
 When a user clicks on submit button, it should submit the data to the fronend app.
 
