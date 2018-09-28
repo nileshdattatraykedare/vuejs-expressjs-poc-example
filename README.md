@@ -1,4 +1,4 @@
-# Software Architect @ iMoney
+# Head of Technology @ iMoney
 Hello! Thanks so much for your interest in joining iMoney tech team!
 
 Below is the technical test for you! Please do let us know if you have any questions! You can email us at: tech@imoney-group.com!
