@@ -22,7 +22,7 @@ export function getAllLeads(req, res) {
 
 // get single lead based on the id
 export function getLead(req, res) {
-    Lead.findById(req.params.id, (error, lead) => {
+    Lead.find({_id: req.params.id}, (error, lead) => {
         if (error) { res.json(error) }
         res.json(lead)
     })
