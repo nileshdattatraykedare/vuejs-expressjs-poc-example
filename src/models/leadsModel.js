@@ -19,7 +19,11 @@ const LeadsSchema = new Schema({
         type: String,
         required: 'Product Name is required.'
     },
+    _created_at: {
+        type: Date,
+        default: new Date()
+    }
 
-})
+},{versionKey: false})
 
 export default LeadsSchema;
