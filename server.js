@@ -18,7 +18,8 @@ function appStart() {
         console.log(`you are server is running on ${PORT}`);
     })
 }
-let attempts=1;
+
+let attempts = 1;
 let retryTime = 1;
 const mongodb_uri = 'mongodb://leadapp_user:leadapp_password@54.255.150.202:27017/leadapp';
 const configuration = {
@@ -26,16 +27,26 @@ const configuration = {
     autoReconnect: true,
     useNewUrlParser: true,
 };
-mongoose.connect(mongodb_uri, configuration).then(function () {
-    appStart();
-}).catch(function (error) {
+
+function retryConnecting(error) {
     console.error(error);
     attempts++;
     retryTime = retryTime * attempts * 100; //ms
-    console.log("retrying to connect db with attempt " + attempts);
-    setTimeout(function () {
 
-    }, retryTime)
+    if (attempts <= 5) {
+        console.log("retrying to connect mongodb with attempt " + attempts);
+        setTimeout(function () {
+            appStart();
+        }, retryTime)
+    } else {
+        new Error("Cannot connect to mongodb");
+    }
+}
 
-})
+mongoose.connect(mongodb_uri, configuration).then(function () {
+    appStart();
+}).catch(function (error) {
+    retryConnecting(error);
+
+});
 

@@ -1,13 +1,18 @@
+import {SQS_LEADS_QUQUE_URL} from 'constants'
 import mongoose from 'mongoose'
-import leadsSchema from '../models/leadsModel'
+import leadsSchema from '../models/leadsModel';
 
-const Lead = mongoose.model('Lead', leadsSchema)
+console.log("Mongoose state: " + mongoose.connection.readyState);
+
+const Lead = mongoose.model('Lead', leadsSchema);
 
 // add new lead to the database
 export function addNewLead(req, res) {
     let newLead = new Lead(req.body)
     newLead.save((error, lead) => {
-        if (error) { res.json(error) }
+        if (error) {
+            res.json(error)
+        }
         res.json(lead)
     })
 }
