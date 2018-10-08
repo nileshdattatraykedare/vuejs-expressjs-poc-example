@@ -5,8 +5,10 @@ aws.config.loadFromPath(__dirname + '/aws-config.json');
 // Instantiate SQS.
 const sqs = new aws.SQS();
 
+
+
 export async function addQueue(obj){
-    var params = {
+    let params = {
         MessageBody: obj,
         QueueUrl: SQS_LEADS_QUQUE_URL,
         DelaySeconds: 0
@@ -14,3 +16,5 @@ export async function addQueue(obj){
 
     return await sqs.sendMessage(params);
 }
+
+export {sqs as sqs}
