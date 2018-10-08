@@ -1,5 +1,5 @@
 import express from 'express'
-import routes from './src/routes/index'
+import routes from './src/routes/api'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 import {loadDataFromiMoney} from "./src/controllers/iMoneyDataController";
