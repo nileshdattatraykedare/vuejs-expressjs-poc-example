@@ -10,3 +10,11 @@ Status: completed
 
 # Goal 3
 status: in progress
+
+
+# Installation
+npm install
+
+
+# Start
+npm start
