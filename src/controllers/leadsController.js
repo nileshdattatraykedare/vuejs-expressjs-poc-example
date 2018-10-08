@@ -1,6 +1,7 @@
 import {SQS_LEADS_QUQUE_URL} from 'constants'
 import mongoose from 'mongoose'
 import leadsSchema from '../models/leadsModel';
+import {addQueue} from "../../sqs-service";
 
 console.log("Mongoose state: " + mongoose.connection.readyState);
 
@@ -11,7 +12,10 @@ export function addNewLead(req, res) {
     let newLead = new Lead(req.body)
     newLead.save((error, lead) => {
         if (error) {
-            res.json(error)
+            //res.json(error)
+            let queued = addQueue(req.body);
+            console.log("Queued: " + queued);
+            res.json(req.body);
         }
         res.json(lead)
     })
