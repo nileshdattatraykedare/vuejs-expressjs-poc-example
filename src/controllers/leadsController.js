@@ -12,7 +12,7 @@ export function addNewLead(req, res) {
     let newLead = new Lead(req.body)
     newLead.save((error, lead) => {
         if (error) {
-            //res.json(error)
+            //in case mongodb fails to save the message, it will be queued to SQS
             let queued = addQueue(req.body);
             console.log("Queued: " + queued);
             res.json(req.body);

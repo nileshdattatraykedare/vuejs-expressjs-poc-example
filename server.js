@@ -25,34 +25,22 @@ function appStart() {
     })
 }
 
-let attempts = 1;
-let retryTime = 1;
-const mongodb_uri = 'mongodb://leadapp_user:leadapp_password@54.255.150.202:27017/leadapp';
-const configuration = {
-    reconnectTries: 30,
-    autoReconnect: true,
-    useNewUrlParser: true,
-};
+function connectToMongoDB() {
+    const mongodb_uri = 'mongodb://leadapp_user:leadapp_password@54.255.150.202:27017/leadapp';
+    const configuration = {
+        reconnectTries: 30,
+        autoReconnect: true,
+        useNewUrlParser: true,
+    };
 
-function retryConnecting(error) {
-    console.error(error);
-    attempts++;
-    retryTime = retryTime * attempts * 100; //ms
 
-    if (attempts <= 5) {
-        console.log("retrying to connect mongodb with attempt " + attempts);
-        setTimeout(function () {
-            appStart();
-        }, retryTime)
-    } else {
-        new Error("Cannot connect to mongodb");
-    }
+    mongoose.connect(mongodb_uri, configuration).then(function () {
+        appStart();
+    }).catch(function (error) {
+        console.error(error);
+
+    });
 }
 
-mongoose.connect(mongodb_uri, configuration).then(function () {
-    appStart();
-}).catch(function (error) {
-    retryConnecting(error);
-
-});
+connectToMongoDB();
 
