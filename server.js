@@ -2,18 +2,13 @@ import express from 'express'
 import routes from './src/routes/index'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
-import aws from "aws-sdk";
-require('./src/jobs/index')
+import {loadDataFromiMoney} from "./src/controllers/iMoneyDataController";
+require('./src/jobs/jobs-scheduler')
 const app = express()
 const PORT = 3000
 
 mongoose.Promise = global.Promise;
-aws.config.loadFromPath(__dirname + '/aws-config.json');
-// Instantiate SQS.
-const sqs = new aws.SQS();
-global.sqs = sqs;
-
-
+loadDataFromiMoney();
 function appStart() {
     app.use(bodyParser.urlencoded({extended: true}))
     app.use(bodyParser.json());

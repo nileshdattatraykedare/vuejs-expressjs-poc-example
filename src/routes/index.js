@@ -1,4 +1,5 @@
 import {getAllLeads, addNewLead, updateLead, deleteLead, getLead} from "../controllers/leadsController";
+import {getImoneyDataFromRedis} from "../controllers/iMoneyDataController";
 
 const routes = (app) => {
     app.route('/lead')
@@ -9,6 +10,8 @@ const routes = (app) => {
         .get(getLead)
         .put(updateLead)
         .delete(deleteLead)
+    app.route('/json/personal-loan-desktop.json')
+        .get(getImoneyDataFromRedis)
 }
 
 export default routes

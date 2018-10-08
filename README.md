@@ -60,7 +60,7 @@ Prepare your backend application. The following URL has all the personal loan in
 https://www.imoney.my/json/personal-loan-desktop.json
 
 * Your app should read the URL (https://www.imoney.my/json/personal-loan-desktop.json) from the configuration
-* Load all data in memory (redis) 
+* Load all data in memory (redisClient)
 * You should serve the same data as json from your app's route e.g. http://localhost:3000/json/personal-loan-desktop.json
 * and be ready for the next goal!
 
@@ -119,7 +119,7 @@ Note: The frontend app should also asynchronously send the lead to the Lead coll
 
 Young hackers are always around and growing. They need a playground to test their toys however iMoney can't be the target!
 
-Lets implement a rate limiter (redis?):
+Lets implement a rate limiter (redisClient?):
 
 * A single IP should not be able to hit your app more than 100 times per min
 * Integration of oAuth (https://auth0.com/), JWT
