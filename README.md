@@ -13,7 +13,12 @@ Status: completed
 
 
 # Goal 3
-status: in progress
+status: completed
+
+screens:
+![picture](screen_goal_3_a.png)
+
+![picture](screen_goal_3_b.png)
 
 
 # Installation

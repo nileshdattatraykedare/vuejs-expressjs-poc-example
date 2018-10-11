@@ -56,6 +56,10 @@
 </script>
 
 <style>
+    body{
+        max-width: 70%;
+        margin: auto;
+    }
     @media screen and (max-width: 600px) {
         .column {
             width: 100%;
