@@ -4,9 +4,11 @@ import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 import {loadDataFromiMoney} from "./src/controllers/iMoneyDataController";
 require('./src/jobs/jobs-scheduler')
+import cors from 'cors';
 const app = express()
 const PORT = 3000
 
+app.use(cors());
 mongoose.Promise = global.Promise;
 loadDataFromiMoney();
 function appStart() {
