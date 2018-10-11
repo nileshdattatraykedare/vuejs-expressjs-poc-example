@@ -27,13 +27,16 @@ screens:
 ![picture](screen_goal_3_b.png)
 
 
-# Installation
-backend
+# setup backend and frontend
+# in project root
 npm install
 
-# Start
+# BAckend Start
 npm start
 
+# setup frontend
 cd frontend
 npm install
+
+# Frontend Start
 npm run serve
