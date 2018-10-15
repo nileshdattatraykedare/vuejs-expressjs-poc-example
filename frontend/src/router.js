@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import PersonalLoan from './views/PersonalLoan.vue'
+import LoanCalculator from './views/LoanCalculator.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -25,6 +26,12 @@ export default new Router({
           path: '/personal-loan',
           name: 'personal-loan',
           component: PersonalLoan
+      }
+      ,
+      {
+          path: '/loan-calculator',
+          name: 'loan-calculator',
+          component: LoanCalculator
       }
   ]
 })

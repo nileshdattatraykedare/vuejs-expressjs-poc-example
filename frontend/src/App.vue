@@ -1,14 +1,28 @@
 <template>
+
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/personal-loan">Personal Loan</router-link>
-    </div>
+    <Slide>
+
+      <router-link to="/"><span>Home</span></router-link>
+      <router-link to="/about"><span>About</span></router-link>
+      <router-link to="/personal-loan"><span>Personal Loan</span></router-link>
+      <router-link to="/loan-calculator"><span>Loan Calculator</span></router-link>
+
+  </Slide>
     <router-view/>
   </div>
-</template>
 
+
+</template>
+<script>
+    import { Slide } from 'vue-burger-menu'  // import the CSS transitions you wish to use, in this case we are using `Slide`
+
+    export default {
+        components: {
+            Slide // Register your component
+        }
+    }
+  </script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
