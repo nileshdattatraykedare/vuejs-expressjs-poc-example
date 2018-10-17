@@ -15,31 +15,31 @@
       <label>Interest Rate</label>
       <p><input type="number" v-model="interest_rate" value="5.99" /> <span>{{interest_rate}} %</span></p>
 
-    
+
     </form>
     <p>Principal Installment: {{ borrow / (tenure * 12) }}</p>
-      <p>Yearly Interest: {{(borrow * interest_rate) / 100}} </p>
-      <p>Monthly Interest: {{((borrow * interest_rate) / 100) / 12}}</p>
-      <p>Monthly Repayment: {{(((borrow * interest_rate) / 100) / 12) + (borrow / (tenure * 12))}}</p>
+    <p>Yearly Interest: {{(borrow * interest_rate) / 100}} </p>
+    <p>Monthly Interest: {{((borrow * interest_rate) / 100) / 12}}</p>
+    <p>Monthly Repayment: {{(((borrow * interest_rate) / 100) / 12) + (borrow / (tenure * 12))}}</p>
   </div>
 
 </template>
 <script>
-//Monthly Repayment = Monthly Interest + Principal Installment;
-//Monthly Interest = Yearly Interest / 12;
- // Yearly Interest = (Loan Amount * interest Rate) / 100;
- // Principal Installment = Loan Amount / (Selected Tenure * 12);
-export default {
-  name: 'LoanCalculator',
- data() {
- return {
-    borrow: 0,
-    tenure: 1,
-    interest_rate: 5.99
-  }
-  }
-}
+    //Monthly Repayment = Monthly Interest + Principal Installment;
+    //Monthly Interest = Yearly Interest / 12;
+    // Yearly Interest = (Loan Amount * interest Rate) / 100;
+    // Principal Installment = Loan Amount / (Selected Tenure * 12);
+    export default {
+        name: 'LoanCalculator',
+        data() {
+            return {
+                borrow: 0,
+                tenure: 1,
+                interest_rate: 5.99
+            }
+        }
+    }
 </script>
 <style>
   input { padding:10px;}
-  </style>
+</style>
