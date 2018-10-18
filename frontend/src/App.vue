@@ -2,9 +2,6 @@
 
   <div id="app">
     <Slide>
-
-      <router-link to="/"><span>Home</span></router-link>
-      <router-link to="/about"><span>About</span></router-link>
       <router-link to="/personal-loan"><span>Personal Loan</span></router-link>
       <router-link to="/loan-calculator"><span>Loan Calculator</span></router-link>
 

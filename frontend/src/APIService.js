@@ -10,4 +10,14 @@ export class APIService{
         return axios.get(url).then(response => response.data);
     }
 
+    saveLead(postData){
+        const lead = {name: postData.customerName, email: postData.customerEmail, phone: postData.phoneNumber, productName: postData.productName}
+        const url = `${API_URL}/lead/`;
+        return axios.post(url, lead).then(response => {
+            console.log('post api response: ' + JSON.stringify(response));
+        }).catch(e => {
+                console.error('Catched Exception:'  + e);
+        });
+    }
+
 }

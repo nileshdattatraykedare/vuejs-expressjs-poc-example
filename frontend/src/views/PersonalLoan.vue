@@ -1,6 +1,6 @@
 <template>
     <div class="personal-loan">
-        <h1>This is an Personal Loan page</h1>
+
 
         <div class="row table__product.table__product--promo" v-for="plList in plLists">
             <div class="col-promo"></div>
@@ -14,8 +14,8 @@
                 <p>{{plList.minimum_financing_amount}}</p>
                 <p>36 Months</p>
             </div>
-            <div style="margin-bottom:5%;margin-top:5%;" class="column col-apply table__product table__product--promo col-xs-18p">
-                <div><a :href="base_imoney_url+'/'+plList.field_apply_url" class="btn btn-success btn-apply">Apply Now</a></div>
+            <div style="margin-bottom:5%;margin-top:5%;" class="  table__product--promo col-xs-18p">
+                <div><router-link  :to="{ name: 'apply-now', params: { productName: plList.productName }}"><a href="#" class="btn btn-success btn-apply">Apply Now</a></router-link></div>
             </div>
         </div>
 
@@ -57,7 +57,7 @@
 
 <style>
     body{
-        max-width: 70%;
+        max-width: 75%;
         margin: auto;
     }
     @media screen and (max-width: 600px) {
@@ -73,7 +73,9 @@
     }
     .column {
         float: left;
-        width: 20%;
+        width: 15%;
+        height: 200px;
+        border-bottom: 1px solid cadetblue;
     }
 
     /* Clear floats after the columns */

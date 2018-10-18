@@ -24,6 +24,7 @@
     <p>Yearly Interest: <span style="font-weight: bold">{{((borrow * interest_rate) / 100).toFixed(2)}} </span></p>
     <p>Monthly Interest: <span style="font-weight: bold">{{(((borrow * interest_rate) / 100) / 12).toFixed(2)}}</span></p>
     <p>Monthly Repayment: <span style="font-weight: bold">{{((((borrow * interest_rate) / 100) / 12) + (borrow / (tenure * 12))).toFixed(2)}}</span></p>
+
   </div>
 
 </template>
