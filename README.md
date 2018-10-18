@@ -94,7 +94,7 @@ curl -X POST \
 Added api rate limiter
 100 / 1 minute
 
-# INSTALLATION
+# MANUAL INSTALLATION
 
 Backend:
 
@@ -109,3 +109,8 @@ Backend:
 
 # Frontend Start
   <code>npm run serve</code>
+  
+# Docket Installation
+Run dockerTask.sh to build a Docker image and run your app / backend api in a container.
+
+<code>sh ./dockerTask.sh</code>

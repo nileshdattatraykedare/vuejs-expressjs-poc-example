@@ -12,14 +12,14 @@
     "validator": "^10.8.0",
     "vue": "^2.5.17",
     "vue-burger-menu": "^1.0.7",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.0.0-beta.53",
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
-    "axios": "^0.18.0",
     "vue-cli-plugin-axios": "0.0.4",
     "vue-cli-plugin-bootstrap-vue": "^0.1.0",
     "vue-template-compiler": "^2.5.17"
