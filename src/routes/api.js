@@ -1,8 +1,11 @@
 import {getAllLeads, addNewLead, updateLead, deleteLead, getLead} from "../controllers/leadsController";
 import {getImoneyDataFromRedis} from "../controllers/iMoneyDataController";
+import {verifyLogin} from "../controllers/authController";
 
 const routes = (app) => {
-    app.route('/lead')
+    app.route('/login')
+        .post(verifyLogin)
+    app.route('/lead').all(require('../../auth'))
         .get(getAllLeads)
         .post(addNewLead)
 

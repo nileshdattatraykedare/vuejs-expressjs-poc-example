@@ -1,9 +1,14 @@
 <template>
     <div class="personal-loan">
 
+        <div><h3>iMoney Offers</h3></div>
 
-        <div class="row table__product.table__product--promo" v-for="plList in plLists">
-            <div class="col-promo"></div>
+        <p align="center" v-if="loading">
+            <img src="../assets/lg.palette-rotating-ring-loader.gif" border="0"/>
+            Loading offers.....
+        </p>
+
+        <div style="padding-left: 20%;padding-top: 5%;" class="row table__product.table__product--promo" v-for="plList in plLists">
             <div class="column"><img :src="base_imoney_url+plList.bankLogo" class="logo_pl"></div>
             <div class="column"><p><a :href="base_imoney_url+'/'+plList.product_path">{{plList.title}}</a></p>
                 <p>{{plList.field_product_highlight}}</p>
@@ -31,10 +36,10 @@
         data() {
 
             return {
+                loading: true,
                 base_imoney_url: 'https://www.imoney.my',
                 plLists: [],
                 numberOfPl: 0,
-
             };
 
         },
@@ -45,6 +50,7 @@
                 apiService.getPersonalLoan().then((data) => {
                     console.log(data)
                     this.plLists = data;
+                    this.loading = false;
                 });
             },
         },
