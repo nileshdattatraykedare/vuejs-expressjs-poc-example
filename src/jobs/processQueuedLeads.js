@@ -39,10 +39,13 @@ export function processQueuedLeads(){
             // Get the first message (should be the only one since we said to only get one above)
             var message = data.Messages[0],
                 body = JSON.parse(message.Body);
+            console.log(body)
             // Now this is where you'd do something with this message
-            addQueue(message.Body);  // whatever you wanna do
-            // Clean up after yourself... delete this message from the queue, so it's not executed again
-            deleteQueuedMessage(message);  // We'll do this in a second
+            addQueue(body).then(function () {
+                // Clean up after yourself... delete this message from the queue, so it's not executed again
+                deleteQueuedMessage(message);  // We'll do this in a second
+            });  // whatever you wanna do
+
         }
     });
 }

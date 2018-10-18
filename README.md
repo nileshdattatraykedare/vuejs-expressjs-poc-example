@@ -1,8 +1,9 @@
 # Lead App
-Frontend: VueJS
-Backend: ExpressJS
+Frontend is powered by VueJS
+Api / Microservice by ExpressJS, Moongose
 Database: MongoDB
-Memory: Redis
+In-Memory/Cacheing : Redis
+Queuing / Message broker: SQS
 
 
 ## Goal 1
@@ -43,6 +44,10 @@ Status: completed
 
 Description using v-model directive of VueJs, I completed the loan calculator.
 
+## Goal 5
+status: completed
+
+Made ApplyNow button on Personal Loan page function with supportive form that saves leads to database.
 
 # setup backend and frontend
 # in project root

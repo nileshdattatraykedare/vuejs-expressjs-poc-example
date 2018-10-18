@@ -41,6 +41,7 @@
         },
         methods: {
         created() {
+            this.user.productName = this.routerValue;
             return apiService.saveLead(this.user).then((data) => {
                 this.thank = true;
                 this.ok = false;
