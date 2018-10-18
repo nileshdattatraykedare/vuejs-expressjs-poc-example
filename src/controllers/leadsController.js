@@ -1,4 +1,3 @@
-import {SQS_LEADS_QUQUE_URL} from 'src/confs/constants'
 import mongoose from 'mongoose'
 import leadsSchema from '../models/leadsModel';
 import {addQueue} from "../confs/sqs-service";
