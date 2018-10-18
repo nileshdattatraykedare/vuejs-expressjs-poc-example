@@ -1,5 +1,5 @@
 import * as jwt from "jsonwebtoken";
-import config from '../../config'
+import config from '../confs/config'
 export function verifyLogin(req, res) {
     /*
              * Check if the username and password is correct

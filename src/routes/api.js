@@ -5,7 +5,7 @@ import {verifyLogin} from "../controllers/authController";
 const routes = (app) => {
     app.route('/login')
         .post(verifyLogin)
-    app.route('/lead').all(require('../../auth'))
+    app.route('/lead').all(require('../confs/auth'))
         .get(getAllLeads)
         .post(addNewLead)
 

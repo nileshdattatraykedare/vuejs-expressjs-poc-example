@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 import {loadDataFromiMoney} from "./src/controllers/iMoneyDataController";
 import cors from 'cors';
-import {Limiter} from "./src/rate-limiter";
+import {Limiter} from "./src/confs/rate-limiter";
 
 require('./src/jobs/jobs-scheduler')
 mongoose.Promise = global.Promise;

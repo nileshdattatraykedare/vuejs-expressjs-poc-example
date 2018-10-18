@@ -1,5 +1,5 @@
-import {addQueue, sqs} from '../../sqs-service'
-import {SQS_LEADS_QUQUE_URL} from "../../constants";
+import {addQueue, sqs} from '../confs/sqs-service'
+import {SQS_LEADS_QUQUE_URL} from "../confs/constants";
 import mongoose from "mongoose";
 import leadsSchema from "../models/leadsModel";
 const Lead = mongoose.model('Lead', leadsSchema);

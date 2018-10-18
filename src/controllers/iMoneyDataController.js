@@ -1,5 +1,5 @@
-import {IMONEY_DATA_URL} from "../../constants";
-import {redisClient} from "../../redis-client";
+import {IMONEY_DATA_URL} from "../confs/constants";
+import {redisClient} from "../confs/redis-client";
 
 const request = require('request');
 export function loadDataFromiMoney() {

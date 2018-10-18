@@ -1,4 +1,4 @@
-import {redisClient} from "../redis-client";
+import {redisClient} from "./redis-client";
 
 export class Limiter{
 

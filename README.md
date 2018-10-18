@@ -38,7 +38,7 @@ and loading data from api <code>http://localhost:3000/json/personal-loan-desktop
 
 screens:
 
-![picture](personal-loan-screenshot.png)
+![picture](src/resources/personal-loan-screenshot.png)
 
 
 
@@ -49,7 +49,7 @@ http://localhost:8080/loan-calculator
 
 Description using v-model directive of VueJs, I completed the loan calculator.
 
-![picture](loan-calculator.png)
+![picture](src/resources/loan-calculator.png)
 
 
 
@@ -58,7 +58,7 @@ status: completed
 
 Made ApplyNow button on Personal Loan page function with supportive form that saves leads to database.
 
-![picture](apply-now-screenshot.png)
+![picture](src/resources/apply-now-screenshot.png)
 
 ## Goal 6
 status: completed

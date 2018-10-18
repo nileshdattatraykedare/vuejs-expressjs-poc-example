@@ -1,7 +1,7 @@
-import {SQS_LEADS_QUQUE_URL} from 'constants'
+import {SQS_LEADS_QUQUE_URL} from 'src/confs/constants'
 import mongoose from 'mongoose'
 import leadsSchema from '../models/leadsModel';
-import {addQueue} from "../../sqs-service";
+import {addQueue} from "../confs/sqs-service";
 
 console.log("Mongoose state: " + mongoose.connection.readyState);
 
