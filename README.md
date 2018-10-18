@@ -94,13 +94,13 @@ curl -X POST \
 Added api rate limiter
 100 / 1 minute
 
-# setup backend and frontend
-# in project root
-  <code>npm install </code>
+# INSTALLATION
 
+Backend:
 
-# Backend Start
-  <code>npm start</code>
+  <code> npm install</code>
+  
+  <code> npm start</code>
 
 # setup frontend
  <code>cd frontend</code>
