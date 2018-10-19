@@ -32,9 +32,9 @@ creating route for http://localhost:3000/json/personal-loan-desktop.json
 
 status: completed
 
-Description: added VueJs Cli to create frontend, added vue-router for the required
-<code>http://localhost:8080/personal-loan</code>
-and loading data from api <code>http://localhost:3000/json/personal-loan-desktop.json</code> using axios and vue component
+Description: added VueJs Cli to create frontend, added vue-router for the required 
+uri: http://localhost:8080/personal-loan
+and loading data from api http://localhost:3000/json/personal-loan-desktop.json using axios and vue component
 
 screens:
 
@@ -63,7 +63,7 @@ Made ApplyNow button on Personal Loan page function with supportive form that sa
 ## Goal 6
 status: completed
 added JWT and Auth login
-<code>
+
 curl -X POST \
   http://localhost:3000/login/ \
   -H 'Content-Type: application/json' \
@@ -73,11 +73,11 @@ curl -X POST \
 "username":"admin",
 "password": "admin"
 }'
-</code>
+
 
 Example posting lead:
 
-<code>
+
 curl -X POST \
   http://localhost:3000/lead/ \
   -H 'Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM5ODg0NzUwLCJleHAiOjE1NDI0NzY3NTB9.NKWxVI-SXk2wNEV3S7xl4IP0jpuQsg1FLIfSjuMehrM' \
@@ -89,7 +89,7 @@ curl -X POST \
 "email":"alok@gmail.com",
 "phone":"9898989899",
 "productName":"Samsung TV WD"
-}'</code>
+}'
 
 Added api rate limiter
 100 / 1 minute
@@ -113,19 +113,19 @@ installed Added Mocha/ Chai / nyc for tests and code coverage
 
 Backend:
 
-  <code> npm install</code>
+  npm install
   
-  <code> npm start</code>
+  npm start
 
 # setup frontend
- <code>cd frontend</code>
+ cd frontend
 
- <code>npm install</code>
+ npm install
 
 # Frontend Start
-  <code>npm run serve</code>
+  npm run serve
   
 # Docket Installation
 Run dockerTask.sh to build a Docker image and run your app / backend api in a container.
 
-<code>sh ./dockerTask.sh</code>
+sh ./dockerTask.sh
