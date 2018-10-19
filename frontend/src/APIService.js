@@ -22,9 +22,9 @@ export class APIService{
         const url = `${API_URL}/lead/`;
         return axios.post(url, lead, config).then(response => {
             console.log('post api response: ' + JSON.stringify(response));
-        }).catch(e => {
-                console.error('Catched Exception:'  + e);
-        });
+        }).catch(function (e) {
+            console.error('catched error' + e);
+        })
     }
 
 }
