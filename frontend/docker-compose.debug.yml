@@ -10,6 +10,6 @@ services:
       - "80:80"
       - "5858:5858"
     volumes:
-      - .:/src
+      - .:/backend
     environment:
       - REMOTE_DEBUGGING

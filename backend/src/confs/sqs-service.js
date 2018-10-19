@@ -1,5 +1,5 @@
 import aws from 'aws-sdk';
-import {SQS_LEADS_QUQUE_URL} from '../../src/confs/constants'
+import {SQS_LEADS_QUQUE_URL} from './constants'
 
 aws.config.loadFromPath(__dirname + '/aws-config.json');
 // Instantiate SQS.

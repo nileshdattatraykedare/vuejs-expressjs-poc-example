@@ -4,9 +4,9 @@
   "description": "lead collector",
   "main": "index.js",
   "scripts": {
-    "test": "nyc ./node_modules/.bin/mocha --compilers js:babel-core/register ./tests/*.spec.js --timeout 30000",
-    "start": "nodemon ./server.js --exec babel-node --presets babel-preset-env",
-    "build": "babel src -d dist"
+    "test": "nyc ./node_modules/.bin/mocha --compilers js:babel-core/register ../tests/*.spec.js --timeout 30000",
+    "start": "nodemon src/server.js --exec babel-node --presets babel-preset-env",
+    "build": "babel src -d dist --source-maps inline --copy-files"
   },
   "repository": {
     "type": "git",

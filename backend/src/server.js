@@ -1,13 +1,13 @@
 import express from 'express'
-import routes from './src/routes/api'
+import routes from './routes/api'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
-import {loadDataFromiMoney} from "./src/controllers/iMoneyDataController";
+import {loadDataFromiMoney} from "./controllers/iMoneyDataController";
 import cors from 'cors';
-import {Limiter} from "./src/confs/rate-limiter";
-import {connectToMongoDB} from "./src/confs/mongodb";
+import {Limiter} from "./confs/rate-limiter";
+import {connectToMongoDB} from "./confs/mongodb";
 
-require('./src/jobs/jobs-scheduler')
+require('./jobs/jobs-scheduler')
 mongoose.Promise = global.Promise;
 const app = express()
 const PORT = 3000

@@ -1,9 +1,9 @@
 //import mongoose from "mongoose";
 
-//import leadsSchema from "../src/models/leadsModel";
+//import leadsSchema from "../backend/models/leadsModel";
 
 
-//import {connectToMongoDB} from "../src/confs/mongodb";
+//import {connectToMongoDB} from "../backend/confs/mongodb";
 
 // Tell chai that we'll be using the "should" style assertions.
 let chai = require('chai');
