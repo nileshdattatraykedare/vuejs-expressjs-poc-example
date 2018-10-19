@@ -9,6 +9,12 @@ In-Memory/Cacheing : Redis
 
 Queuing / Message broker: SQS
 
+## Online Demo on AWS
+
+frontend: http://ec2-3-0-91-193.ap-southeast-1.compute.amazonaws.com/personal-loan
+
+backend: http://ec2-3-0-91-193.ap-southeast-1.compute.amazonaws.com:3000
+
 
 ## Goal 1
 
