@@ -95,11 +95,12 @@ Added api rate limiter
 100 / 1 minute
 
 ## Goal 7 
-
+status: done
 Added docket setup/conf files and scripts
 
 
 ## Goal 8
+status: added
 
 installed Added Mocha/ Chai / nyc for tests and code coverage
 
