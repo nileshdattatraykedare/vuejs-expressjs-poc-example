@@ -5,6 +5,7 @@ import bodyParser from 'body-parser'
 import {loadDataFromiMoney} from "./src/controllers/iMoneyDataController";
 import cors from 'cors';
 import {Limiter} from "./src/confs/rate-limiter";
+import {connectToMongoDB} from "./src/confs/mongodb";
 
 require('./src/jobs/jobs-scheduler')
 mongoose.Promise = global.Promise;
@@ -26,22 +27,7 @@ function appStart() {
     })
 }
 
-function connectToMongoDB() {
-    const mongodb_uri = 'mongodb://leadapp_user:leadapp_password@54.255.150.202:27017/leadapp';
-    const configuration = {
-        reconnectTries: 30,
-        autoReconnect: true,
-        useNewUrlParser: true,
-    };
 
-
-    mongoose.connect(mongodb_uri, configuration).then(function () {
-        console.log('MongoDB connected');
-    }).catch(function (error) {
-        console.error(error);
-
-    });
-}
 appStart();
 connectToMongoDB();
 

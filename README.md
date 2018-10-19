@@ -94,6 +94,20 @@ curl -X POST \
 Added api rate limiter
 100 / 1 minute
 
+## Goal 7 
+
+Added docket setup/conf files and scripts
+
+
+## Goal 8
+
+installed Added Mocha/ Chai / nyc for tests and code coverage
+
+   npm test
+   
+![picture](src/resources/tests-and-code-coverage.png) 
+
+
 # MANUAL INSTALLATION
 
 Backend:
