@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc ./node_modules/.bin/mocha --compilers js:babel-core/register ./tests/*.spec.js --timeout 30000",
-    "start": "nodemon ./server.js --exec babel-node --presets babel-preset-env"
+    "start": "nodemon ./server.js --exec babel-node --presets babel-preset-env",
+    "build": "babel src -d dist"
   },
   "repository": {
     "type": "git",
