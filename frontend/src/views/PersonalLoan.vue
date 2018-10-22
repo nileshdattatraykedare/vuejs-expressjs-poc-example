@@ -9,6 +9,7 @@
         </p>
 
         <div style="padding-left: 20%;padding-top: 5%;" class="row table__product.table__product--promo" v-for="plList in plLists">
+
             <div class="column"><img :src="base_imoney_url+plList.bankLogo" class="logo_pl"></div>
             <div class="column"><p><a :href="base_imoney_url+'/'+plList.product_path">{{plList.title}}</a></p>
                 <p>{{plList.field_product_highlight}}</p>
@@ -19,9 +20,10 @@
                 <p>{{plList.minimum_financing_amount}}</p>
                 <p>36 Months</p>
             </div>
-            <div style="margin-bottom:5%;margin-top:5%;" class="  table__product--promo col-xs-18p">
+            <div class="  table__product--promo col-xs-18p">
                 <div><router-link  :to="{ name: 'apply-now', params: { productName: plList.productName }}"><a href="#" class="btn btn-success btn-apply">Apply Now</a></router-link></div>
             </div>
+
         </div>
 
     </div>
@@ -81,7 +83,9 @@
         float: left;
         width: 35%;
         height: auto;
-        border-bottom: 1px solid cadetblue;
+    }
+    .row {
+        border-bottom: cadetblue solid 1px;
     }
 
     /* Clear floats after the columns */
@@ -95,7 +99,8 @@
         padding: 10px 15px;
         font-family: "open_sanssemibold", "Helvetica Neue", Arial, sans-serif;
         color: #fff;
-        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); }
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    }
     .col-promo i {
         display: inline-block;
         margin-right: 10px;
