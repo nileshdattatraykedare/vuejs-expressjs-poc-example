@@ -68,7 +68,7 @@
     }
     @media screen and (max-width: 600px) {
         .column {
-            width: 100%;
+            width: 90%;
         }
     }
     .logo_pl{
@@ -79,8 +79,8 @@
     }
     .column {
         float: left;
-        width: 15%;
-        height: 200px;
+        width: 35%;
+        height: 180px;
         border-bottom: 1px solid cadetblue;
     }
 
