@@ -80,7 +80,7 @@
     .column {
         float: left;
         width: 35%;
-        height: 180px;
+        height: auto;
         border-bottom: 1px solid cadetblue;
     }
 
