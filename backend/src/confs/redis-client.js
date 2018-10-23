@@ -2,7 +2,7 @@
  * api rate limiter nodejs redis
  * @author Nilesh Kedare
  */
-const redisConfig = {port:6379, host:'54.255.150.202'};
+const redisConfig = {port:{PORT}, host:'{HOST}'};
 
 import Redis from 'redis';
 
