@@ -9,19 +9,6 @@ In-Memory/Cacheing : Redis
 
 Queuing / Message broker: SQS
 
-## Online Demo deployed on AWS
-
-frontend: 
-http://ec2-3-0-91-193.ap-southeast-1.compute.amazonaws.com/personal-loan
-
-http://ec2-3-0-91-193.ap-southeast-1.compute.amazonaws.com/apply-now/Pensioner%20Personal%20Financing-i
-
-http://ec2-3-0-91-193.ap-southeast-1.compute.amazonaws.com/loan-calculator
-
-backend api: 
-
-http://ec2-3-0-91-193.ap-southeast-1.compute.amazonaws.com:3000
-
 
 ## Goal 1
 

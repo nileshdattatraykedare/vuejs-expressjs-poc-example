@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 module.exports.connectToMongoDB = function() {
-    const mongodb_uri = 'mongodb://leadapp_user:leadapp_password@54.255.150.202:27017/leadapp';
+    const mongodb_uri = 'mongodb://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}';
     const configuration = {
         reconnectTries: 30,
         autoReconnect: true,
